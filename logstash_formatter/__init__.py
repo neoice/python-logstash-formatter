@@ -89,7 +89,7 @@ class LogstashFormatter(logging.Formatter):
 
         logr = self.defaults.copy()
         logr.update({'@message': msg,
-                     '@timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+                     'timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
                      '@source_host': self.source_host,
                      '@fields': fields})
 
